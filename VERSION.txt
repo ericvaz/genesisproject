@@ -1,0 +1,18 @@
+Genesis Project
+Release: school-monetization-v1
+Date: 2026-05-03
+
+Included updates:
+- school landing section expanded into a real pilot and licensing offer
+- recommended monetization model added: free pilot, teacher pack, annual school license, association license
+- student-facing classroom experience positioned as no login, no student data, and no programmatic ads
+- KJV-only documentation cleaned up
+- SCHOOL_MONETIZATION_PLAN.md added
+- TEACHER_PACK_OUTLINE.md added
+- README updated for school distribution and monetization
+
+
+Mobile/iPhone optimization revision:
+- Added viewport-fit safe-area support.
+- Reworked mobile hero, cards, tabs, Bible reader, school pricing, and family tree layout.
+- Added horizontal and vertical panning plus touch pinch zoom for the family tree on iPhone.

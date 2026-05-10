@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Genesis Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="mobile-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <img class="brand-logo" src="assets/images/logo.png" alt="Genesis Project logo" />
+    </div>
+    <nav class="side-nav" aria-label="Primary">
+      <a class="active" href="#home">⌂ <span>Home</span></a>
+      <a href="#chapters">⌁ <span>Timeline</span></a>
+      <a href="#tree">♙ <span>Family Tree</span></a>
+      <a href="#chapter-explorer">☷ <span>50 Chapters</span></a>
+      <a href="#story-detail">▻ <span>Story Room</span></a>
+      <a href="#schools">⌘ <span>Schools</span></a>
+      <a href="#about">ⓘ <span>About</span></a>
+    </nav>
+  </aside>
+
+  <main class="shell" id="home">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <div class="global-search-wrap">
+        <label class="global-search">
+          <input id="globalSearch" autocomplete="off" placeholder="Search people, chapters, or stories..." />
+          <span>⌕</span>
+        </label>
+        <div class="search-results" id="globalSearchResults" hidden></div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <img class="watercolor-left" src="assets/images/watercolor-left.png" alt="" />
+
+      <div class="hero-copy">
+        <p class="eyebrow">Explore. Discover. Understand.</p>
+        <h1>The Story<br>Begins Here.</h1>
+        <p class="lead">A calm visual journey through the Book of Genesis. Timelines, family connections, scripture, film links, maps, and study materials arranged for deep learning.</p>
+        <div class="hero-actions">
+          <a href="#chapters" class="btn primary">Explore Timeline <span>→</span></a>
+          <a href="#schools" class="btn secondary">School Pilot <span>⌘</span></a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Watercolor landscape from Genesis"></div>
+
+      <aside class="verse-card">
+        <img class="botanical-right" src="assets/images/botanical-right.png" alt="" />
+        <div class="verse-line"></div>
+        <blockquote>In the beginning,<br>God created the heavens<br>and the earth.</blockquote>
+        <p>Genesis 1:1</p>
+      </aside>
+    </section>
+
+    <section class="dashboard">
+      <div class="chapters-panel" id="chapters">
+        <div class="panel-head">
+          <div>
+            <h2>The Chapters</h2>
+            <p>Explore Genesis through its major story movements, then dive into all 50 chapters below.</p>
+          </div>
+          <a href="#story-detail">Open Story Room →</a>
+        </div>
+
+        <div class="chapter-grid">
+          <article class="chapter-card" data-story="beginning">
+            <span class="chapter-badge">1</span>
+            <img src="assets/images/chapters/chapter-1.png" onerror="this.src='assets/images/placeholder.png'" alt="The Beginning" />
+            <div class="chapter-text"><h3>The Beginning</h3><p class="range">Genesis 1–2</p><p>Creation of the heavens and the earth.</p><button type="button">→</button></div>
+          </article>
+          <article class="chapter-card" data-story="fall">
+            <span class="chapter-badge">2</span>
+            <img src="assets/images/chapters/chapter-2.png" onerror="this.src='assets/images/placeholder.png'" alt="The Fall" />
+            <div class="chapter-text"><h3>The Fall</h3><p class="range">Genesis 3–5</p><p>The first sin and the first family line.</p><button type="button">→</button></div>
+          </article>
+          <article class="chapter-card" data-story="noah">
+            <span class="chapter-badge">3</span>
+            <img src="assets/images/chapters/chapter-3.png" onerror="this.src='assets/images/placeholder.png'" alt="Noah" />
+            <div class="chapter-text"><h3>Noah</h3><p class="range">Genesis 6–9</p><p>God’s covenant with Noah and the flood.</p><button type="button">→</button></div>
+          </article>
+          <article class="chapter-card" data-story="babel">
+            <span class="chapter-badge">4</span>
+            <img src="assets/images/chapters/chapter-4.png" onerror="this.src='assets/images/placeholder.png'" alt="Nations Begin" />
+            <div class="chapter-text"><h3>Nations Begin</h3><p class="range">Genesis 10–11</p><p>The table of nations and Tower of Babel.</p><button type="button">→</button></div>
+          </article>
+          <article class="chapter-card" data-story="abraham">
+            <span class="chapter-badge">5</span>
+            <img src="assets/images/chapters/chapter-5.png" onerror="this.src='assets/images/placeholder.png'" alt="Abraham" />
+            <div class="chapter-text"><h3>Abraham</h3><p class="range">Genesis 12–25</p><p>God’s promise and Abraham’s faith.</p><button type="button">→</button></div>
+          </article>
+          <article class="chapter-card" data-story="isaac">
+            <span class="chapter-badge">6</span>
+            <img src="assets/images/chapters/chapter-6.png" onerror="this.src='assets/images/placeholder.png'" alt="Isaac" />
+            <div class="chapter-text"><h3>Isaac</h3><p class="range">Genesis 21–27</p><p>The promise continues with Isaac.</p><button type="button">→</button></div>
+          </article>
+          <article class="chapter-card" data-story="jacob">
+            <span class="chapter-badge">7</span>
+            <img src="assets/images/chapters/chapter-7.png" onerror="this.src='assets/images/placeholder.png'" alt="Jacob" />
+            <div class="chapter-text"><h3>Jacob</h3><p class="range">Genesis 25–36</p><p>Jacob’s journey and God’s faithfulness.</p><button type="button">→</button></div>
+          </article>
+          <article class="chapter-card" data-story="joseph">
+            <span class="chapter-badge">8</span>
+            <img src="assets/images/chapters/chapter-8.png" onerror="this.src='assets/images/placeholder.png'" alt="Joseph" />
+            <div class="chapter-text"><h3>Joseph</h3><p class="range">Genesis 37–50</p><p>Joseph’s rise and God’s plan fulfilled.</p><button type="button">→</button></div>
+          </article>
+        </div>
+
+        <div class="timeline-divider" id="chapter-focus" aria-live="polite">
+          <div class="divider-line"></div>
+          <div class="divider-copy">
+            <p class="eyebrow">Selected Timeline Chapter</p>
+            <h3 id="focusTitle">The Beginning</h3>
+            <p id="focusRange">Genesis 1–2</p>
+            <p id="focusOpening">In the beginning, God created the heavens and the earth.</p>
+          </div>
+        </div>
+
+        <div class="story-strip" id="story-room">
+          <div>
+            <h2>Story Room</h2>
+            <p>Each major movement links to video, scripture, maps, prompts, and the related family line.</p>
+            <a href="#story-detail" class="btn secondary">Enter Story Room →</a>
+          </div>
+          <button class="media-tile" type="button" data-story-jump="film">▶<span>Film</span></button>
+          <button class="media-tile" type="button" data-story-jump="study">▶<span>Study Videos</span></button>
+          <button class="media-tile" type="button" data-story-jump="scripture">▤<span>Scripture</span></button>
+          <button class="media-tile" type="button" data-story-jump="maps">⌖<span>Maps</span></button>
+        </div>
+
+        <section class="chapter-explorer" id="chapter-explorer">
+          <div class="section-title compact">
+            <p class="eyebrow">Full Chapter Explorer</p>
+            <h2>Browse all 50 chapters</h2>
+            <p>Select any chapter for a focused summary, key people, and the related family context.</p>
+          </div>
+
+          <div class="chapter-explorer-grid">
+            <div class="chapter-list" id="chapterList" aria-label="Genesis chapter list"></div>
+
+            <article class="chapter-detail-card" id="chapterDetail">
+              <div class="chapter-detail-header">
+                <div>
+                  <p class="eyebrow" id="chapterDetailNumber">Chapter 1</p>
+                  <h3 id="chapterDetailTitle">Creation Begins</h3>
+                  <p class="detail-reference" id="chapterDetailReference">Genesis 1</p>
+                </div>
+                <button type="button" class="detail-jump-btn" id="chapterDetailTreeJump">Open in Family Tree</button>
+              </div>
+
+              <div class="chapter-tabs" role="tablist" aria-label="Chapter explorer detail tabs">
+                <button type="button" class="chapter-tab active" data-tab="summary" role="tab" aria-selected="true" aria-controls="chapterPanelSummary">Summary</button>
+                <button type="button" class="chapter-tab" data-tab="scripture" role="tab" aria-selected="false" aria-controls="chapterPanelScripture">Read KJV</button>
+                <button type="button" class="chapter-tab" data-tab="study" role="tab" aria-selected="false" aria-controls="chapterPanelStudy">Interpretation &amp; Study</button>
+              </div>
+
+              <div class="chapter-tab-panels">
+                <section class="chapter-tab-panel active" id="chapterPanelSummary" data-panel="summary" role="tabpanel">
+                  <p class="chapter-detail-opening" id="chapterDetailOpening">In the beginning God created the heaven and the earth.</p>
+
+                  <div class="detail-block">
+                    <h4>Key families</h4>
+                    <div class="tag-row" id="chapterDetailFamilies"></div>
+                  </div>
+
+                  <div class="detail-block">
+                    <h4>Key people</h4>
+                    <div class="tag-row" id="chapterDetailPeople"></div>
+                  </div>
+
+                  <div class="detail-block">
+                    <h4>Connected major movement</h4>
+                    <p id="chapterDetailStory"></p>
+                  </div>
+                </section>
+
+                <section class="chapter-tab-panel" id="chapterPanelScripture" data-panel="scripture" role="tabpanel" hidden>
+                  <div class="detail-block scripture-reader-block" id="chapterScriptureReaderBlock">
+                    <div class="scripture-reader-head">
+                      <div>
+                        <h4>Read the chapter</h4>
+                        <p>The in-page reader uses the King James Version only. Scroll inside the panel to read the full chapter.</p>
+                      </div>
+                      <div class="bible-controls kjv-only">
+                        <span class="bible-version-pill">King James Version</span>
+                        <a class="reader-link" id="bibleExternalLink" href="https://www.biblegateway.com/passage/?search=Genesis+1&version=KJV" target="_blank" rel="noopener">Open source →</a>
+                      </div>
+                    </div>
+                    <div class="bible-reader" id="bibleReader" tabindex="0" aria-live="polite">
+                      <p class="bible-status">Loading Genesis 1...</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="chapter-tab-panel" id="chapterPanelStudy" data-panel="study" role="tabpanel" hidden>
+                  <div class="study-panel-grid">
+                    <article class="study-card study-card-lead">
+                      <p class="study-label">Interpretive focus</p>
+                      <h4 id="studyPanelHeading">Creation and the ordering work of God</h4>
+                      <p id="studyPanelFocus">This chapter introduces a foundational movement in Genesis. Read it by watching what God does, what changes in the human family, and how the narrative prepares the chapters that follow.</p>
+                    </article>
+
+                    <article class="study-card">
+                      <h4>What to notice</h4>
+                      <ul class="study-list" id="studyInsightList"></ul>
+                    </article>
+
+                    <article class="study-card">
+                      <h4>Questions for reflection</h4>
+                      <ul class="study-list" id="studyQuestionList"></ul>
+                    </article>
+
+                    <article class="study-card study-card-context">
+                      <h4>Family and narrative context</h4>
+                      <p id="studyContextText">The chapter belongs to a larger family movement in Genesis.</p>
+                      <div class="tag-row" id="studyContextPeople"></div>
+                    </article>
+                  </div>
+                </section>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="family-panel" id="tree">
+        <div class="tree-panel-head">
+          <p class="eyebrow">Family Tree</p>
+          <h2 id="treeChapterTitle">The Beginning</h2>
+          <p id="treeChapterSummary">Adam and Eve stand at the beginning of the human family line in Genesis.</p>
+        </div>
+
+        <label class="tree-search"><input id="personSearch" placeholder="Search a person, e.g. Joseph" /><span>⌕</span></label>
+
+        <div class="tree-legend" aria-label="Family tree legend">
+          <span><i class="legend-line parent"></i> parent</span>
+          <span><i class="legend-line spouse"></i> spouse</span>
+          <span><i class="legend-line divine"></i> created / called</span>
+        </div>
+
+        <div class="tree-toolbar" aria-label="Family tree controls">
+          <div class="tree-drag-hint">
+            <span class="drag-handle" aria-hidden="true">↕</span>
+            <span>The full tree always fits the panel width. Explore mainly vertically.</span>
+          </div>
+          <div class="tree-zoom-controls">
+            <button id="treeZoomOut" type="button" aria-label="Zoom out">−</button>
+            <label class="tree-zoom-slider" for="treeZoomRange">
+              <span>Zoom</span>
+              <input id="treeZoomRange" type="range" min="0.45" max="1.25" step="0.05" value="0.65" />
+            </label>
+            <button id="treeZoomIn" type="button" aria-label="Zoom in">+</button>
+            <button id="treeZoomReset" class="zoom-reset" type="button">Reset</button>
+          </div>
+        </div>
+
+        <div class="tree-stage" id="treeStage" aria-label="Vertically draggable and zoomable family tree viewport">
+          <div class="tree-diagram" id="treeDiagram" role="img" aria-label="Genesis family tree diagram">
+            <svg id="treeLinks" class="tree-links" aria-hidden="true"></svg>
+            <div id="treeNodes" class="tree-nodes"></div>
+          </div>
+        </div>
+
+        <div id="personResult" class="person-result">
+          <h3>Adam</h3>
+          <p>Genesis 1–5</p>
+          <small>First man in Genesis and husband of Eve.</small>
+        </div>
+
+        <div class="tree-scripture" id="treeScripture">
+          <p class="scripture-label" id="treeScriptureLabel">The Beginning</p>
+          <h3 id="treeScriptureRange">Genesis 1–2</h3>
+          <p id="treeScriptureOpening">In the beginning, God created the heavens and the earth.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="story-detail" id="story-detail">
+      <div class="section-title">
+        <p class="eyebrow">Story Room</p>
+        <h2 id="storyRoomHeading">Watch, study, and read together.</h2>
+        <p id="storyRoomIntro">Each major movement can become a focused learning room with film, study video, scripture, maps, and discussion prompts.</p>
+      </div>
+
+      <div class="story-room-grid">
+        <article class="room-card" id="storyCardFilm">
+          <h3>Film</h3>
+          <p id="storyFilmText"></p>
+          <a class="text-link" id="storyFilmLink" href="#" target="_blank" rel="noopener">Open resource →</a>
+        </article>
+
+        <article class="room-card" id="storyCardStudy">
+          <h3>Study Video</h3>
+          <p id="storyStudyText"></p>
+          <a class="text-link" id="storyStudyLink" href="#" target="_blank" rel="noopener">Open resource →</a>
+        </article>
+
+        <article class="room-card scripture" id="storyCardScripture">
+          <h3>Scripture</h3>
+          <p><strong id="storyScriptureRef">Genesis 1:1</strong></p>
+          <p id="storyScriptureText">In the beginning, God created the heavens and the earth.</p>
+          <a class="text-link" id="storyScriptureLink" href="#" target="_blank" rel="noopener">Read passage →</a>
+        </article>
+
+        <article class="room-card" id="storyCardMap">
+          <h3>Maps & Places</h3>
+          <p id="storyMapText"></p>
+          <a class="text-link" id="storyMapLink" href="#" target="_blank" rel="noopener">Open map context →</a>
+        </article>
+      </div>
+
+      <article class="prompt-card">
+        <div>
+          <p class="eyebrow">Study prompts</p>
+          <h3 id="storyPromptTitle">Reflect on the beginning</h3>
+        </div>
+        <ul id="storyPromptList"></ul>
+      </article>
+    </section>
+
+    <section class="schools" id="schools">
+      <div class="schools-hero">
+        <div>
+          <p class="eyebrow">For Schools</p>
+          <h2>Make Genesis visual, calm, and teachable.</h2>
+          <p>The Genesis Project can be offered to Christian schools as a classroom-safe visual study tool: no student accounts, no student data collection, no ads inside the student experience, and a clear KJV-only scripture reader.</p>
+          <div class="school-actions">
+            <a class="btn primary" href="mailto:hello@thegenesisproject.ca?subject=Genesis%20Project%20school%20pilot%20request">Request School Pilot <span>→</span></a>
+            <a class="btn secondary" href="#school-pricing">See Licensing <span>⌄</span></a>
+          </div>
+        </div>
+        <aside class="school-note-card">
+          <span class="school-note-icon">⌘</span>
+          <h3>Best first offer</h3>
+          <p>Give schools the site for free, then sell the teacher pack, printable materials, and annual school license.</p>
+        </aside>
+      </div>
+
+      <div class="school-feature-grid">
+        <article>
+          <h3>Classroom visualizer</h3>
+          <p>Timeline cards, chapter summaries, family lineages, and story rooms help students see the structure of Genesis before they discuss interpretation.</p>
+        </article>
+        <article>
+          <h3>Teacher pack</h3>
+          <p>Paid add-on with lesson plans, worksheets, quizzes, discussion prompts, printable lineage maps, and suggested classroom sequences.</p>
+        </article>
+        <article>
+          <h3>School-safe deployment</h3>
+          <p>Static website, offline zip option, KJV-only scripture, no login requirement, and no student-facing programmatic ads.</p>
+        </article>
+      </div>
+
+      <div class="school-pricing" id="school-pricing">
+        <article class="pricing-card featured">
+          <p class="pricing-kicker">Pilot</p>
+          <h3>Free Classroom Pilot</h3>
+          <p class="price">$0</p>
+          <p>Use the public site in class and collect teacher feedback.</p>
+          <ul>
+            <li>Genesis timeline</li>
+            <li>KJV chapter reader</li>
+            <li>Family tree explorer</li>
+            <li>Story room resources</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card">
+          <p class="pricing-kicker">Best first revenue</p>
+          <h3>Teacher Pack</h3>
+          <p class="price">CAD $49</p>
+          <p>A one-time downloadable classroom kit for individual teachers.</p>
+          <ul>
+            <li>Printable worksheets</li>
+            <li>Lesson plan sequence</li>
+            <li>Reflection questions</li>
+            <li>Assessment prompts</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card">
+          <p class="pricing-kicker">School license</p>
+          <h3>Annual School Access</h3>
+          <p class="price">CAD $399</p>
+          <p>For schools that want a branded, supported, classroom-safe copy.</p>
+          <ul>
+            <li>Offline version</li>
+            <li>Teacher kit included</li>
+            <li>School onboarding guide</li>
+            <li>Minor yearly updates</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card">
+          <p class="pricing-kicker">Network</p>
+          <h3>Association License</h3>
+          <p class="price">Custom</p>
+          <p>For Christian school associations, homeschool networks, churches, or curriculum partners.</p>
+          <ul>
+            <li>Multi-school access</li>
+            <li>Co-branded version</li>
+            <li>Teacher training session</li>
+            <li>Future book modules</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="school-trust-strip">
+        <div>
+          <strong>Recommended monetization rule:</strong>
+          <span>Keep the student experience free and ad-free. Monetize around the classroom through teacher materials, school licenses, sponsorships, and future modules.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About this project</h2>
+      <p>The Genesis Project is a static learning site designed for personal Bible study, teaching, and guided exploration. It combines story movements, a focused family tree, chapter-by-chapter summaries, and a curated study room into one calm interface.</p>
+    </section>
+  </main>
+
+  <script src="assets/js/genesis-family-chapter-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
